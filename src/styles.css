@@ -1,0 +1,108 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  max-width: fit-content;
+  padding: 20px 20px 30px 30px;
+  color: #247291;
+}
+
+.container {
+  box-shadow: 10px 10px 10px 10px grey;
+  padding: 20px;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: #247291;
+  font-weight: bold;
+}
+
+h5,
+h6 {
+  color: #247291;
+}
+
+.card-body {
+  margin-top: 20;
+}
+
+#entercity {
+  padding: 5px 100px;
+  border-radius: 8px;
+  text-align: left;
+  font-size: larger;
+}
+
+.btn-secondary,
+.btn-outline-secondary {
+  padding: 5px 50px;
+  font-size: larger;
+}
+
+h1 {
+  padding: 5px;
+  text-align: left;
+}
+
+h2 {
+  font-size: 20px;
+  text-align: left;
+  padding: 5px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+#current-temp {
+  color: #247291;
+  font-size: 62px;
+  padding-left: 15px;
+  margin-right: 0;
+  position: relative;
+  right: -45px;
+}
+.units {
+  font-size: 14px;
+  color: #247291;
+  padding-left: 40px;
+  position: relative;
+  top: -30px;
+  margin: 100;
+}
+
+ul {
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+}
+
+li {
+  font-size: smaller;
+  margin: 0;
+}
+
+.suncloud {
+  max-width: 250;
+  padding: 0;
+}
+
+img {
+  max-width: fit-content;
+  display: block;
+  margin: 0 auto;
+}
+
+h4,
+h5 {
+  text-align: center;
+}
+
+h6 {
+  text-align: justify;
+  padding: 14px 20px;
+}
+
+#btn-warning {
+  padding: 40px 500px;
+}
