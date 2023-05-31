@@ -1,171 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <title>Weather</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="src/styles.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-10">
-          <div class="card">
-            <div class="card-body" id="weatherapp">
-              <div class="row">
-                <div class="col-5">
-                  <form id="enter-city">
-                  <input
-                    type="text"
-                    placeholder="Enter city..."
-                    autocomplete="on"
-                    autofocus = "on"
-                    id="entercity"
-                  />
-                </div>
-                <div class="col-3">
-                  <input type = "submit" value = "Search" class="btn btn-secondary" id="search"/>
-                </div>
-                <div class="col-3">
-                  <button type="button" class="btn btn-outline-secondary" id = "location">
-                    Location...
-                  </button>
-                </div>
-                </form>
-                <div class="row">
-                    <h1>London, England</h1>
-                </div>
-                <div class="row">
-                    <h2>Last updated: Friday, 14:19</h2>
-                </div>
-                <div class="row">
-                  <div class="col-6">
-                    <br />
-                    <br />
-                    <strong id="current-temp">11 </strong> <span class="units"><a href="#" id="celsius-link">°C</a> | <a href="#" id="fahrenheit-link">°F</a> </span>
-                  </div>
-                  <div class="col-3">
-                    <ul>
-                      <li><h6 id = "humidity">Humidity: 76%</h6></li>
-                      <li><h6 id = "wind">Wind: 12 mph</h6></li>
-                      <li><h6 id = "description">Cloudy</h6></li>
-                    </ul>
-                  </div>
-                  <div class="col-3">
-                    <img src="images/suncloud.jpg" alt="suncloud" width="150" id="currentweather-image" />
-                  </div>
-                  <hr />
-                  <div class="row">
-                    <div class="col">
-                      <h4>Sat</h4>
-                    </div>
-                    <div class="col">
-                      <h4>Sun</h4>
-                    </div>
-                    <div class="col">
-                      <h4>Mon</h4>
-                    </div>
-                    <div class="col">
-                      <h4>Tue</h4>
-                    </div>
-                    <div class="col">
-                      <h4>Wed</h4>
-                    </div>
-                    <div class="col">
-                      <h4>Thur</h4>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col">
-                      <img
-                        src="images/suncloud.jpg"
-                        alt="suncloud"
-                        width="50"
-                      />
-                    </div>
-                    <div class="col">
-                      <img src="images/cloudy.jpg" alt="cloudy" width="50" />
-                    </div>
-                    <div class="col">
-                      <img src="images/windy.jpg" alt="windy" width="50" />
-                    </div>
-                    <div class="col">
-                      <img
-                        src="images/suncloud.jpg"
-                        alt="suncloud"
-                        width="50"
-                      />
-                    </div>
-                    <div class="col">
-                      <img
-                        src="images/suncloud.jpg"
-                        alt="suncloud"
-                        width="50"
-                      />
-                    </div>
-                    <div class="col">
-                      <img
-                        src="images/suncloud.jpg"
-                        alt="suncloud"
-                        width="50"
-                      />
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col"><h5>14° 7°</h5></div>
-                    <div class="col"><h5>16° 5°</h5></div>
-                    <div class="col"><h5>16° 6°</h5></div>
-                    <div class="col"><h5>15° 8°</h5></div>
-                    <div class="col"><h5>13° 9°</h5></div>
-                    <div class="col"><h5>17° 8°</h5></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-2">
-          <div class="card">
-            <div class="card-body" id="weatherapp">
-              <button type="button" class="btn" id="button">
-                <h6>Munich, <br />Germany</h6>
-              </button>
-              <br />
-              <br />
-              <button type="button" class="btn" id="button">
-                <h6>Tokyo, <br />Japan</h6>
-              </button>
-              <br />
-              <br />
-              <button type="button" class="btn" id="button">
-                <h6>Sydney, <br />Australia</h6>
-              </button>
-              <br />
-              <br />
-              <button type="button" class="btn" id="button">
-                <h6>Madrid, <br />Spain</h6>
-              </button>
-              <br />
-              <br />
-              <button type="button" class="btn" id="button">
-                <h6>Mumbai, <br />India</h6>
-              </button>
-              <br />
-              <br />
-            </div>
-          </div>
-        </div>
-      </div>
-      <br/>
-    <footer><a href="https://github.com/sheenamorjaria/Weather-Project.git" target="blank"> Open source code</a> by Sheena Morjaria </footer>
-    </div>
-    <script src="src/index.js"></script>
-  </body>
-</html>
+let now = new Date();
+
+let date = now.getDate;
+
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let day = days[now.getDay()];
+console.log(days[now.getDay()]);
+
+let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+
+let hours = now.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
+
+let h2 = document.querySelector("h2");
+h2.innerHTML = `Last updated: ${day}, ${hours}:${minutes}`;
+
+let findCity = document.querySelector("#enter-city");
+findCity.addEventListener("submit", showCity);
+
+function showCity(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#entercity");
+  let h1 = document.querySelector("h1");
+  h1.innerHTML = `${cityInput.value}`;
+}
+
+function showLocation(position) {
+  let apiKey = "aca4dd3643b89e94dbd3cac6cf6f2638";
+  let lon = position.coords.longitude;
+  let lat = position.coords.latitude;
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(showTemperature);
+}
+
+function showTemperature(response) {
+  let temperature = Math.round(response.data.main.temp);
+  let currentTemp = document.querySelector("#current-temp");
+  currentTemp.innerHTML = ` ${temperature}`;
+  let cityName = response.data.name;
+  let country = response.data.sys.country;
+  let h1 = document.querySelector("h1");
+  h1.innerHTML = `${cityName}, ${country}`;
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} mph`;
+  let humid = document.querySelector("#humidity");
+  humid.innerHTML = `Humidity: ${Math.round(response.data.main.humidity)}%`;
+  let description = response.data.weather[0].main;
+  let currentdescription = document.querySelector("#description");
+  currentdescription.innerHTML = `${description}`;
+  let currentImage = document.querySelector("#currentweather-image");
+  currentImage.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+}
+function getCurrentPosition() {
+  navigator.geolocation.getCurrentPosition(showLocation);
+}
+
+let locationButton = document.querySelector("#location");
+locationButton.addEventListener("click", getCurrentPosition);
+
+function search(city) {
+  let apiKey = "8ca7dd4e61360b90fb66918853670e48";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showWeather);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#entercity").value;
+  search(city);
+}
+
+function showWeather(response) {
+  let temperature = Math.round(response.data.main.temp);
+  let currentTemp = document.querySelector("#current-temp");
+  currentTemp.innerHTML = ` ${temperature}`;
+  let cityName = response.data.name;
+  let country = response.data.sys.country;
+  let h1 = document.querySelector("h1");
+  h1.innerHTML = `${cityName}, ${country}`;
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} mph`;
+  let humid = document.querySelector("#humidity");
+  humid.innerHTML = `Humidity: ${Math.round(response.data.main.humidity)}%`;
+  let description = response.data.weather[0].main;
+  let currentdescription = document.querySelector("#description");
+  currentdescription.innerHTML = `${description}`;
+  let currentImage = document.querySelector("#currentweather-image");
+  currentImage.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+}
+
+let searchForm = document.querySelector("#enter-city");
+searchForm.addEventListener("submit", handleSubmit);
+
+search("London");
