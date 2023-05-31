@@ -67,9 +67,9 @@ function showTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-    currentImage.setAttribute(
-.setAttribute("alt", response.data.weather[0].description);
+  currentImage.setAttribute("alt", response.data.weather[0].description);
 }
+
 function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(showLocation);
 }
@@ -110,8 +110,7 @@ function showWeather(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-    currentImage.setAttribute(
-.setAttribute("alt", response.data.weather[0].description);
+  currentImage.setAttribute("alt", response.data.weather[0].description);
 }
 
 let searchForm = document.querySelector("#enter-city");
