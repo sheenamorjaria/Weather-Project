@@ -59,6 +59,9 @@ function showTemperature(response) {
   wind.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} mph`;
   let humid = document.querySelector("#humidity");
   humid.innerHTML = `Humidity: ${Math.round(response.data.main.humidity)}%`;
+  let description = response.data.weather[0].main;
+  let currentdescription = document.querySelector("#description");
+  currentdescription.innerHTML = `${description}`;
 }
 function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(showLocation);
@@ -92,6 +95,9 @@ function showWeather(response) {
   wind.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} mph`;
   let humid = document.querySelector("#humidity");
   humid.innerHTML = `Humidity: ${Math.round(response.data.main.humidity)}%`;
+  let description = response.data.weather[0].main;
+  let currentdescription = document.querySelector("#description");
+  currentdescription.innerHTML = `${description}`;
 }
 
 let searchForm = document.querySelector("#enter-city");

@@ -15,13 +15,12 @@
   </head>
   <body>
     <div class="container">
-      <div class = "weatherapp-wrapper">
       <div class="row">
         <div class="col-10">
           <div class="card">
-            <div class="card-body">
+            <div class="card-body" id="weatherapp">
               <div class="row">
-                <div class="col-6">
+                <div class="col">
                   <form id="enter-city">
                   <input
                     type="text"
@@ -31,43 +30,36 @@
                     id="entercity"
                   />
                 </div>
-                <div class="col-3">
+                <div class="col">
                   <input type = "submit" value = "Search" class="btn btn-secondary" id="search"/>
                 </div>
-                <div class="col-3">
+                <div class="col">
                   <button type="button" class="btn btn-outline-secondary" id = "location">
                     Location...
                   </button>
                 </div>
                 </form>
                 <div class="row">
-                  <div class="col">
                     <h1>London, England</h1>
-                  </div>
                 </div>
                 <div class="row">
-                  <div class="col">
                     <h2>Last updated: Friday, 14:19</h2>
-                  </div>
                 </div>
                 <div class="row">
                   <div class="col">
                     <br />
                     <br />
-                    <strong id="current-temp">11 </strong>
-                    <span class="units">
-                      <a href="#" id="celsius-link">°C</a> | 
-                      <a href="#" id="fahrenheit-link">°F</a>                      
-                    </span>
+                    <strong id="current-temp">11 </strong> <span class="units"><a href="#" id="celsius-link">°C</a> | <a href="#" id="fahrenheit-link">°F</a> </span>
                   </div>
                   <div class="col">
                     <ul>
                       <li><h6 id = "humidity">Humidity: 76%</h6></li>
                       <li><h6 id = "wind">Wind: 12 mph</h6></li>
+                      <li><h6 id = "description">Cloudy</h6></li>
                     </ul>
                   </div>
                   <div class="col">
-                    <img src="images/suncloud.jpg" alt="suncloud" width="250" />
+                    <img src="images/suncloud.jpg" alt="suncloud" width="150" id="currentweather-image" />
                   </div>
                   <hr />
                   <div class="row">
@@ -95,34 +87,34 @@
                       <img
                         src="images/suncloud.jpg"
                         alt="suncloud"
-                        width="80"
+                        width="50"
                       />
                     </div>
                     <div class="col">
-                      <img src="images/cloudy.jpg" alt="cloudy" width="80" />
+                      <img src="images/cloudy.jpg" alt="cloudy" width="50" />
                     </div>
                     <div class="col">
-                      <img src="images/windy.jpg" alt="windy" width="80" />
+                      <img src="images/windy.jpg" alt="windy" width="50" />
                     </div>
                     <div class="col">
                       <img
                         src="images/suncloud.jpg"
                         alt="suncloud"
-                        width="80"
-                      />
-                    </div>
-                    <div class="col">
-                      <img
-                        src="images/suncloud.jpg"
-                        alt="suncloud"
-                        width="80"
+                        width="50"
                       />
                     </div>
                     <div class="col">
                       <img
                         src="images/suncloud.jpg"
                         alt="suncloud"
-                        width="80"
+                        width="50"
+                      />
+                    </div>
+                    <div class="col">
+                      <img
+                        src="images/suncloud.jpg"
+                        alt="suncloud"
+                        width="50"
                       />
                     </div>
                   </div>
@@ -139,32 +131,30 @@
             </div>
           </div>
         </div>
-        </div>
-        <div class = "weather-app-wraper">
         <div class="col-2">
           <div class="card">
-            <div class="card-body">
-              <button type="button" class="btn btn-warning">
+            <div class="card-body" id="weatherapp">
+              <button type="button" class="btn" id="button">
                 <h6>Munich, <br />Germany</h6>
               </button>
               <br />
               <br />
-              <button type="button" class="btn btn-warning">
+              <button type="button" class="btn" id="button">
                 <h6>Tokyo, <br />Japan</h6>
               </button>
               <br />
               <br />
-              <button type="button" class="btn btn-warning">
+              <button type="button" class="btn" id="button">
                 <h6>Sydney, <br />Australia</h6>
               </button>
               <br />
               <br />
-              <button type="button" class="btn btn-warning">
+              <button type="button" class="btn" id="button">
                 <h6>Madrid, <br />Spain</h6>
               </button>
               <br />
               <br />
-              <button type="button" class="btn btn-warning">
+              <button type="button" class="btn" id="button">
                 <h6>Mumbai, <br />India</h6>
               </button>
               <br />
@@ -172,11 +162,10 @@
             </div>
           </div>
         </div>
-        </div>
       </div>
-    </div>
-    <br/>
+      <br/>
     <footer><a href="https://github.com/sheenamorjaria/Weather-Project.git" target="blank"> Open source code</a> by Sheena Morjaria </footer>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
