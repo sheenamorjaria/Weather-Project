@@ -82,6 +82,12 @@ h6 {
   font-size: 16px;
 }
 
+.active {
+  color: #247291;
+  cursor: default;
+  text-decoration: none;
+}
+
 .units {
   font-size: 14px;
   color: #247291;
@@ -131,4 +137,12 @@ h6 {
   max-width: 300px;
   text-align: center;
   color: yellow;
+}
+
+#celsius-link {
+  text-decoration: none;
+}
+
+#fahrenheit-link {
+  text-decoration: none;
 }
